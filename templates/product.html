@@ -1,0 +1,39 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+
+{% block content %}
+    <div class="container mb-5">
+        <h1 class="py-3" id="page-header"></h1>
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner" id="page-carusel-div">
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon bg-black" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon bg-black" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+        <div class="py-5 fs-3" id="page-description-div">
+        </div>
+        <div class="row">
+            <div class="col-6 fs-3" id="page-info-div">
+            </div>
+            <div class="col-6 fs-3">
+                <label for="product-quantity">Quantity:</label>
+                <input class="form-control w-25" type="number" name="" id="product-quantity" min="1" value="1">
+                <button type="button" class="btn btn-success" id="add-to-card">Add to Card</button>
+            </div>
+        </div>
+    </div>
+{% endblock content %}
+
+
+{% block js %}
+    <script type="module" src="{% static 'js/product.js' %}"></script>
+{% endblock js %}

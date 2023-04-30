@@ -1,0 +1,42 @@
+{% extends 'layout.html' %}
+{% load static %}
+  
+
+{% block content %}
+  <div class=" row w-100 bg-light">
+    <div class="col-2 p-5">
+      <ul class="list-unstyled ps-0" id="category-list">
+        <li class="mb-1">
+          <button class="border-0 bg-transparent category-list-item">All</button>
+        </li>
+        <!-- <li class="mb-1">
+          <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="true">
+            Home
+          </button>
+          <div class="collapse show" id="home-collapse">
+            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+              <li><a href="#" class="link-dark rounded">Overview</a></li>
+              <li><a href="#" class="link-dark rounded">Updates</a></li>
+              <li><a href="#" class="link-dark rounded">Reports</a></li>
+            </ul>
+          </div>
+        </li> -->
+      </ul>
+      <div class="mt-5 pt-5 border-top">
+        <input class="form-range" type="range" name="" id="quantity-range" min="0" step="10" value="1000" max="10000">
+        <input class="border-0 form-control mt-1" type="number" id="quantity-input" min="0" step="1" max="10000" value="1000">
+        <button class="btn btn-success mt-4" id="price-filter-button">Filter</button>
+      </div>
+    </div>
+    <div class="col-10 my-5 d-flex flex-wrap gap-5" id="product-list">
+      
+    </div>
+  </div>
+{% endblock content %}
+
+
+{% block js %}
+  <script type="module" src="{% static 'js/products.js' %}"></script>
+  <!-- <script src="{% static 'js/infinity_loader.js' %}"></script> -->
+{% endblock js %}
+  

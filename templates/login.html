@@ -1,0 +1,41 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+{% block content %}
+    <section class="vh-75 mt-5 pt-5">
+        <div class="container-fluid h-custom">
+          <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-md-9 col-lg-6 col-xl-5">
+              <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.webp"
+                class="img-fluid" alt="Sample image">
+            </div>
+            <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
+              <form id="login-form">
+                <div class="d-flex flex-row align-items-center justify-content-center justify-content-lg-start my-4">
+                  <p class="lead fw-normal mb-0 me-3 fs-3">Sign in</p>
+                </div>
+                <!-- Email input -->
+                <div class="form-outline mb-4">
+                  <input type="email" id="exampleInputEmail1" class="form-control form-control-lg"
+                    placeholder="Enter a valid email address" aria-describedby="emailHelp"/>
+                    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                </div>
+      
+                <!-- Password input -->
+                <div class="form-outline mb-3">
+                  <input type="password" minlength="8" id="exampleInputPassword1" class="form-control form-control-lg"
+                    placeholder="Enter password" />
+                </div>
+                <button type="submit" class="btn btn-primary fs-5">Submit</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+{% endblock content %}
+    
+
+{% block js %}
+    <script type="module" src="{% static 'js/login.js' %}"></script>
+{% endblock js %}
+    
